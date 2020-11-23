@@ -57,7 +57,7 @@ namespace MovieWeb
             });
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -65,9 +65,7 @@ namespace MovieWeb
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=home}/{action=Index}/{id?}");
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=home}/{action=Index}/{id?}/{next?}");
+                endpoints.MapRazorPages();
             });
         }
     }
