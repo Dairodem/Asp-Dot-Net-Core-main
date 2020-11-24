@@ -24,6 +24,11 @@ namespace MovieWeb.Controllers
         {
             return View();
         }
+        [Route("/Oeps")]
+        public IActionResult Oeps()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
